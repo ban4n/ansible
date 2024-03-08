@@ -1,0 +1,6 @@
+---
+- hosts: all
+  task:
+  - name: Create a user
+    user:
+      name: ban4n
