@@ -1,0 +1,20 @@
+---
+- hosts: all
+  tasks:
+  - name: Create User
+    user:
+      name: dorota
+  - name: Create Group
+    group:
+      name: skubis
+  - name: Create File
+    file:
+      path: /tmp/wszystkiego_najlepszego.txt
+      state: touch
+      owner: dorota
+      group: skubis
+  - name: Add Content
+    lineinfile:
+      path: /tmp/wszystkiego_najlepszego.txt
+      line: "bartus jest najlepszy i uwielbiam z nim pracowac!"
+      
