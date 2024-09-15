@@ -5,5 +5,5 @@
   tasks:
   - name: Touch a file
     win_file:
-      path: "C:\Temp\foo.conf"
+      path: C:\Temp\foo.conf
       state: touch
