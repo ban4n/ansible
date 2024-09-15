@@ -1,7 +1,9 @@
 ---
 - hosts: all
+  become: false
+  gather_facts: no
   tasks:
   - name: Touch a file
-    ansible.windows.win_file:
-      path: C:\Temp\foo.conf
+    win_file:
+      path: "C:\Temp\foo.conf"
       state: touch
