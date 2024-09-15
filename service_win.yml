@@ -1,4 +1,9 @@
-- name: Restart a service
-  win_service:
-    name: spooler
-    state: restarted
+---
+- name: service demo
+  hosts: all
+  become: false
+  tasks:
+  - name: Restart a service
+    win_service:
+      name: nscp
+      state: restarted
