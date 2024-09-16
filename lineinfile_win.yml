@@ -6,9 +6,8 @@
     - name: Insert settings NRPE
       win_lineinfile:
         path: c:\Program Files\NSClient++\nsclient.ini
-        regex: '[/settings/NRPE/server]'
-        insertafter: '[/settings/NRPE/server]'
+        insertafter: '\[\/settings\/NRPE\/server\]'
         line: '{{ item }}'
       with_items:
-        - '; # DH KEY'
         - 'dh = ${certificate-path}/nrpe_dh_2048.pem'
+        - '; # DH KEY'
