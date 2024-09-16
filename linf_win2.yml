@@ -4,8 +4,10 @@
   become: false
   tasks:
     - name: Insert settings NRPE
-      win_lineinfile:
+      win_blockinfile:
         path: c:\Program Files\NSClient++\nsclient.ini
         insertafter: '[/settings/NRPE/server]'
-        insertbefore: '[/modules]'
-        line: 'dh = ${certificate-path}/nrpe_dh_2048.pem'
+        block: |
+          '; # DH KEY'
+          'dh = ${certificate-path}/nrpe_dh_2048.pem'
+          
