@@ -1,0 +1,9 @@
+---
+- name: win_file module demo
+  hosts: all
+  become: false
+  tasks:
+    - name: Insert path without converting \r\n
+      win_lineinfile:
+        path: c:\Program Files\NSClient++\nsclient.ini
+        line: chuj
