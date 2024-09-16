@@ -7,7 +7,7 @@
       blockinfile:
         path: c:\Program Files\NSClient++\nsclient.ini
         insertafter: '[/settings/NRPE/server]'
-        block: |
+        content: |
           '; # DH KEY'
           'dh = ${certificate-path}/nrpe_dh_2048.pem'
           
