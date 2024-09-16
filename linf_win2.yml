@@ -1,0 +1,11 @@
+---
+- name: win_file module demo
+  hosts: all
+  become: false
+  tasks:
+    - name: Insert settings NRPE
+      win_lineinfile:
+        path: c:\Program Files\NSClient++\nsclient.ini
+        insertafter: '[/settings/NRPE/server]'
+        insertbefore: '[/modules]'
+        line: 'dh = ${certificate-path}/nrpe_dh_2048.pem'
