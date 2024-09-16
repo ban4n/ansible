@@ -4,7 +4,7 @@
   become: false
   tasks:
     - name: Insert settings NRPE
-      win_blockinfile:
+      blockinfile:
         path: c:\Program Files\NSClient++\nsclient.ini
         insertafter: '[/settings/NRPE/server]'
         block: |
