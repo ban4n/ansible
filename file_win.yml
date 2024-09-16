@@ -5,5 +5,36 @@
   tasks:
   - name: Touch a file
     win_file:
-      path: 'C:\Tmp\foo.conf'
+      path: 'C:\Tmp\foo1.conf'
       state: touch
+  - name: insert key
+    win_lineinfile: 
+      path: 'C:\Tmp\foo1.conf'
+      line: '-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEAqYwSThW0+Axrf7SZQXN/X73ur9p4x6yTslTbzqcr1k2qjA0f
+anK3liwWQY548JOVURkaw/XiP/mZDwtP7KNk1Kj8mjWOWhwdY/7zwhH87HB5Lc5C
+rF+Lnax9H42fKm40pKQrI51C2tuv58LyCy/crsOpxx+zYjJmSH4NTW29dEjkfaqy
+m7Y3glSQenRA5KM+ZMvQf0FaC+wv3HDXDNQZ97GPHkMFL+NESYsGcDn1RlwvD/rV
+B7ZU3sZPsFjTsl+XRSm4N9d5+MuL6JgX7Oaj6RR5ntv+f3JcqRaDWwkRzZCW5cTJ
+lndClnOg4osfWMPGA/Nzxs5lAGEYzjxDci/kwQIDAQABAoIBAQCRjWRxkIUJpW/r
+9FjVLZgd02pDoaSqlmc9Y0hIgo9JrOdK0EE2G0GsNDDvGqaMscYwFwM5U69mCJrz
+pVx55FO9lU01/eA1T4mTvN36r4KYYH5Hapkmbefn9pp8KhKIVI/w/9bg/jLUvGCo
+8FzmabJkfikUfwx6spXIih5VaG6KklqyynvfFFiQKYLcR9B2KqE4N8nWWebv03iO
+RHYWLzS2cg0LSVm4KFpshUfKNYRKr5/nx4eqQOB8818Vft1Vx//hns5rxlDZKYCu
+fAp1sRFMYYXstPNkX48nDD2myoluqSLWGtVHFb7j/b7V1Ye8j0/Mh/JyG1raX9M3
+Vl4efm0hAoGBAN9Wf8iiT+qjU/CiZ3Td3ccMtpWgKJuXx+ibKvXrnz2eV1lgV69s
+k4PASeQO+C/b/tWvu9TUWxvX7Duw7CnDCUqppmXHnY03NEb//a1w0dxF524Z0NBq
+daMmEFz26RXF+kW54olSrxGbTzgDNDaN6HxsH+h4D3/ldccBbQLuloxFAoGBAMJX
+tlYbEdVF3NG5OWmLFZ/PJXuZ4+SMdwQv5VnjM0zuISBN++lA4Hr15RoL30R2rX4b
+fvzFUodTjLdqqZPKfjuZzIruJxDzTdugpNvZHZDyfYIfY7msnJwR1BFkXqqMo8mr
+9BvM4dYGYNBFj7Adjh/jH4uW5xh6O4NYhNwUViRNAoGBAK1uMlTPFlgS9QAMXWJ3
+V91WlgKjGGWa+/Y5aKcHjeT/rL0O/4iOPA83pymeJkSkBcRSbv3a2dVJW30O6pWT
+iwebrkejN0mN8N6hs5CX55+x+QGasnjl8uv6hwJqCp6J2suCidQxjRmTDXVlp4ol
+sL/OBwkzEnYy7b7X8JsyQ14xAoGAApX4Lx0dF6FeVswIH4diOkYfUY2yoo/b5Ypd
+mtyTCisA9dUTzP63/erXqYkO53JMzKjA/8wAVRyferFIoFbJZzGcrxyMGIWkO4/f
+oa0533vaf6i7QvUxAEKcd77GI67LXxuSm+wV9SsQjrTePJGoGnSDLvBLEuBNemnr
+GqKKouECgYAJ05W82kUcuAElDhetrqQ8iPwURsCct4/8TKB1NDXu8D8Uh4EOhb8c
+GfYGS3R0kiQTsOXtz8jlOkYhTJ8/HVs4QNtraSsRTusTig2TcgRIfSjZV0PsPOlj
+GCgK3KtNX09ytfXDuk90ruIR+FLX0INbJwLC21GVRQsMI+qtE+LbeA==
+-----END RSA PRIVATE KEY-----'
+      
