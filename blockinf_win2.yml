@@ -6,8 +6,12 @@
     - name: Insert settings NRPE
       blockinfile:
         path: c:\Program Files\NSClient++\nsclient.ini
-        insertafter: '[/settings/NRPE/server]'
+   #     insertafter: '[/settings/NRPE/server]'
+   #     content: |
+   #       '; # DH KEY'
+   #       'dh = ${certificate-path}/nrpe_dh_2048.pem'
+        insertafter: "<body>"
         content: |
-          '; # DH KEY'
-          'dh = ${certificate-path}/nrpe_dh_2048.pem'
+          <h1>Welcome to {{ ansible_hostname }}</h1>
+          <p>Last updated on {{ ansible_date_time.iso8601 }}</p>
           
