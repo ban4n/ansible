@@ -1,0 +1,25 @@
+---
+- name: nscp configuration
+  hosts: all
+  become: false
+  vars:
+    source: "/tmp/b4.pem"
+    destination: c:\Temp\
+  tasks:
+    - name: Insert settings NRPE
+      win_lineinfile:
+        path: c:\Program Files\NSClient++\nsclient.ini
+        insertafter: '\[\/settings\/NRPE\/server\]'
+        line: '{{ item }}'
+      with_items:
+        - 'dh = ${certificate-path}/nrpe_dh_2048.pem'
+        - '; # DH KEY'
+    - name: Copy pem file
+      win_copy:
+        src: "{{ source }}"
+        dest: "{{ destination }}"
+    - name: Restart a service
+      win_service:
+        name: nscp
+        state: restarted
+        
