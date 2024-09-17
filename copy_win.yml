@@ -5,7 +5,7 @@
   gather_facts: false  
   vars:
     source: "/tmp/b4.pem"
-    destination: "Desktop/renamed-foo1.conf"
+    destination: "c:\Temp\"
   tasks:
     - name: Copy a single file
       win_copy:
