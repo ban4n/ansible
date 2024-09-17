@@ -1,11 +1,14 @@
 ---
 - name: copy pem
   hosts: all
-  gather_facts: no
   become: false
-    tasks:
+  gather_facts: false  
+  vars:
+    source: "/tmp/b4.pem"
+    destination: "C:\Temp\renamed-foo1.conf"
+  tasks:
     - name: Copy a single file
       win_copy:
-        src: /tmp/b4.pem
-        dest: C:\Temp\renamed-foo.conf
+        src: "{{ source }}"
+        dest: "{{ destination }}"
 #        remote_src: yes
