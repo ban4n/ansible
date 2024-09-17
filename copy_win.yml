@@ -1,10 +1,10 @@
 ---
 - name: copy pem
   hosts: all
-  become: true
+#  become: true
   tasks:
     - name: Copy a single file
       win_copy:
-        src: /root/plays/b4.pem
+        src: /tmp/b4.pem
         dest: C:\Temp\renamed-foo.conf
 #        remote_src: yes
