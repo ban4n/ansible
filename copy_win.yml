@@ -1,12 +1,11 @@
 ---
 - name: copy pem
   hosts: all
-  become: yes
-  become_method: runas
-  become_user: Administrator
-  tasks:
+  gather_facts: no
+  become: false
+    tasks:
     - name: Copy a single file
-      copy:
+      win_copy:
         src: /tmp/b4.pem
         dest: C:\Temp\renamed-foo.conf
 #        remote_src: yes
