@@ -4,34 +4,8 @@
 #  become: true
   tasks:
     - name: Copy a single file
-      win_copy:
- #       src: /tmp/b4.pem
-        content: -----BEGIN RSA PRIVATE KEY-----
-MIIEpQIBAAKCAQEApMBGgVzQAC13dHDA9dg8cPgkHiGE/yIdlXoFFPV1/6T3FAIn
-Mh4iF1L2gKfSBDi+FiQy9DPxaFQb0Ecig4NC6597V/GAlK5wkb3Nv70rnTxBqVr1
-b0itjM0rG3tZtaiFe7xjV94zC7qTpI7Sto3fNlyR7vYVeZD8k7yz4FSYBABFcTo1
-UaU0U+cdBCGlrlF57ZcTdxHC0yzXVSCRn4cUwj75nKuTAcGJVoz0HghPL55UFsLW
-s+lfcQb45+RXyE9jrNpTjcyOEesJjTMmOf15lPiYRtuR+TnbB751YkyYsxYfUxxE
-LZVE8zsftUWZaE6ERCVAnUGbXRdxj1Oc++wnpwIDAQABAoIBAQCBXlJ+5miWmx1A
-HAIJioD7nH6QAnYy+ZENfUFcUdsUoW87EO3CVxMiCY1zPVSW6A+rx0UTqW4ZJGKq
-zBD4ACyeZR8v0X3MQqY2azqTI3KKB3TwDXLIreNJuxnsfJHXKbuXjDjeGKcwwJOL
-FnOz0ffC8jHN2QLH8OfFAtqkfwjXqjQR//6sl+6i6hfouAO6RXz1F1udRIIdB1ZS
-NMIKLDTttvM+Q0pEbGMt0hKf1ZG/maPWwK5XqnGydkU4eudDdQPcZJFcW3oX6De2
-XpJyMxk5CvbphWyY4S0ApVwJKhl6+i6/X2LUKtt8PXSQ9Y1OtqKF8JbSRjrkKWqp
-t9o9YstRAoGBANXXyLp3DWYVcvko4otQcd4f7MBnNCV69u5+iFvhDU7Od1HdTaJu
-/OjS7WN04yEzN2qsY3IRzc6aiQKWMHu84l5tpArPl6QqhWtdML8hGS+Moxhdrh47
-XyRFTXAC2T1pLlwsvYYPeXnJF+BmfeVIZH1F7Yx24fyl1uXAWfouGYd9AoGBAMU6
-7TaevwdeDuyD+8FhcGvivGYAfmUdWDUPfPAx/kolbSxpn4BooWOqHC9mHgSzjEDl
-WclL4AD1pxpuPGbxKzh6TCxiLGesYymSQ+Ixhyic5JFZZELUlEZirgFpFzHqPxtS
-J8Xew6gHZpayzsGVn0OCryYQCuNDWon7b1+pUHzzAoGBAM+MeA5CroZ+GvEpdXex
-xFLKuYakpEAccL5ZoQ9MBxaN3dFe8ZLOFjoDPtRhBnGavBaU6pA0J4R3CLOyAayX
-Tz5HPAgiJBP6ETR7ZmybO06jOUjU48ID7fvOJ7KnkSHBjHV6FxievFAvlTT/RQHc
-mWvdCwph+ES20TR81Ne1FqIhAoGAJwkZqATVVDT2iTM6IbUSVhgDJ8ETQxoCukW9
-eaC7bptntzGUgwqyXpJtj6gLauzKZpG+Kowc4rO8BgwpYkp7PmteJi6sETzaR4EO
-dHdPA+fBiU8C/AMs8Z1YSSkukQ+Gu/aPrqb/XINSd6MeLsxZQDheSA9GyGItSj/8
-dBeDuacCgYEAus4mlWdLhuYHLgXPH2Ai7nPsm4JiHbaHuX/VX081iJaIJeTSCslz
-8PIWuu4aMevcvskw6ecB7fW6ZMKD4ERwm/36hZlSVQuVq1PFxbHQVZ2GRFozroIv
-od76lBJ+QPRVyCxaFhTTMra9kS2koj4GdcoxUrwUZv0KfuRa3lC2ioY=
------END RSA PRIVATE KEY-----
+      copy:
+        src: /tmp/b4.pem
+        
         dest: C:\Temp\renamed-foo.conf
 #        remote_src: yes
