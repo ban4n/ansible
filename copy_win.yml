@@ -1,7 +1,8 @@
 ---
 - name: copy pem
   hosts: all
-  become: runas
+  become: yes
+  become_method: runas
   tasks:
     - name: Copy a single file
       copy:
