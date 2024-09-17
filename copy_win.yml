@@ -6,8 +6,7 @@
     - name: Copy a single file
       win_copy:
  #       src: /tmp/b4.pem
-        content: 
-          -----BEGIN RSA PRIVATE KEY-----
+        content: -----BEGIN RSA PRIVATE KEY-----
 MIIEpQIBAAKCAQEApMBGgVzQAC13dHDA9dg8cPgkHiGE/yIdlXoFFPV1/6T3FAIn
 Mh4iF1L2gKfSBDi+FiQy9DPxaFQb0Ecig4NC6597V/GAlK5wkb3Nv70rnTxBqVr1
 b0itjM0rG3tZtaiFe7xjV94zC7qTpI7Sto3fNlyR7vYVeZD8k7yz4FSYBABFcTo1
@@ -34,6 +33,5 @@ dBeDuacCgYEAus4mlWdLhuYHLgXPH2Ai7nPsm4JiHbaHuX/VX081iJaIJeTSCslz
 8PIWuu4aMevcvskw6ecB7fW6ZMKD4ERwm/36hZlSVQuVq1PFxbHQVZ2GRFozroIv
 od76lBJ+QPRVyCxaFhTTMra9kS2koj4GdcoxUrwUZv0KfuRa3lC2ioY=
 -----END RSA PRIVATE KEY-----
-
         dest: C:\Temp\renamed-foo.conf
 #        remote_src: yes
