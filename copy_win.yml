@@ -6,3 +6,4 @@
       win_copy:
         src: /root/plays/b4.pem
         dest: C:\Temp\renamed-foo.conf
+        remote_src: yes
