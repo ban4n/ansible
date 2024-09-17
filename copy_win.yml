@@ -3,6 +3,6 @@
   hosts: all
   tasks:
     - name: Copy a single file
-      ansible.windows.win_copy:
+      win_copy:
         src: /root/plays/b4.pem
         dest: C:\Temp\renamed-foo.conf
