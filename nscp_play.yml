@@ -3,7 +3,7 @@
   hosts: all
   become: false
   vars:
-    source: "/tmp/b4.pem"
+    source: "/tmp/nrpe_dh_2048.pem"
     destination: C:\Program Files\NSClient++\security\
   tasks:
     - name: Insert settings NRPE
